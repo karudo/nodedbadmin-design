@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/karudo/nodedbadmin-design/issues"
   },
-  "homepage": "https://github.com/karudo/nodedbadmin-design"
+  "homepage": "https://github.com/karudo/nodedbadmin-design",
+  "dependencies": {
+    "gulp-livereload": "~1.2.0",
+    "gulp": "~3.5.5",
+    "gulp-watch": "~0.5.0",
+    "gulp-less": "~1.2.1"
+  }
 }
