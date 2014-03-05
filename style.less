@@ -1,12 +1,28 @@
+@import "reset.less";
+@import "vars.less";
+
+
+html {
+  height: 100%;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
 body {
   font: 12px/18px "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
-  background-color: #ffffff;
-  padding: 0;
-  margin: 0;
+  height: 100%;
+}
+.wrapper {
+  width: 100%;
+  min-width: 1000px;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
 }
 
 .top-menu {
-  height: 20px;
+  @menu-height: 20px;
+  height: @menu-height;
   background-color: #b1f6e1;background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSczMDAnIGhlaWdodD0nMzAwJyB2aWV3Qm94PScwIDAgMTUwIDE1MCc+Cgk8ZmlsdGVyIGlkPSduJyB4PScwJyB5PScwJz4KCQk8ZmVUdXJidWxlbmNlIHR5cGU9J3R1cmJ1bGVuY2UnIGJhc2VGcmVxdWVuY3k9Jy43JyByZXN1bHQ9J2Z1enonIG51bU9jdGF2ZXM9JzInIHN0aXRjaFRpbGVzPSdzdGl0Y2gnLz4KCQk8ZmVDb21wb3NpdGUgaW49J1NvdXJjZUdyYXBoaWMnIGluMj0nZnV6eicgb3BlcmF0b3I9J2FyaXRobWV0aWMnIGsxPScwJyBrMj0nMScgazM9Jy0wLjUzJyBrND0nLjAxJyAvPgoJPC9maWx0ZXI+Cgk8cmVjdCB3aWR0aD0nMTAyJScgaGVpZ2h0PScxMDIlJyBmaWxsPScjOTdkM2MxJy8+Cgk8cmVjdCB4PSctMSUnIHk9Jy0xJScgd2lkdGg9JzEwMiUnIGhlaWdodD0nMTAyJScgZmlsbD0nI2IxZjZlMScgZmlsdGVyPSd1cmwoI24pJyBvcGFjaXR5PScxJy8+Cjwvc3ZnPg==');
   font-size: 15px;
   padding-left: 20px;
@@ -18,12 +34,49 @@ body {
   }
 }
 
+.middle {
+  width: 100%;
+  padding: 0 0 100px;
+  position: relative;
+}
+.middle:after {
+  display: table;
+  clear: both;
+  content: '';
+}
+.container {
+  width: 100%;
+  float: left;
+  overflow: hidden;
+}
+.content {
+  padding: 0 0 0 @left-panel-width;
+}
+
+
+.left-panel {
+  @background-color: #c7ced7;
+  float: left;
+  width: @left-panel-width;
+  margin-left: -100%;
+  position: relative;
+  background: @background-color;
+  a {
+    display: block;
+    font-size: 11px;
+    padding-left: 15px;
+    overflow-x: hidden;
+    margin-bottom: 2px;
+    background: @background-color;
+    &:hover {
+      overflow-x: visible;
+    }
+  }
+}
+
 .top-panel {
   height: 50px;
   background: linear-gradient(to top, #969696, #d7d7d9);
   font-size: 11px;
 }
 
-.left-panel {
-  background-color: #c7ced7;
-}
