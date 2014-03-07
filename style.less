@@ -24,7 +24,8 @@ body {
 .top-menu {
   @menu-height: 20px;
   height: @menu-height;
-  background-color: #b1f6e1;background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSczMDAnIGhlaWdodD0nMzAwJyB2aWV3Qm94PScwIDAgMTUwIDE1MCc+Cgk8ZmlsdGVyIGlkPSduJyB4PScwJyB5PScwJz4KCQk8ZmVUdXJidWxlbmNlIHR5cGU9J3R1cmJ1bGVuY2UnIGJhc2VGcmVxdWVuY3k9Jy43JyByZXN1bHQ9J2Z1enonIG51bU9jdGF2ZXM9JzInIHN0aXRjaFRpbGVzPSdzdGl0Y2gnLz4KCQk8ZmVDb21wb3NpdGUgaW49J1NvdXJjZUdyYXBoaWMnIGluMj0nZnV6eicgb3BlcmF0b3I9J2FyaXRobWV0aWMnIGsxPScwJyBrMj0nMScgazM9Jy0wLjUzJyBrND0nLjAxJyAvPgoJPC9maWx0ZXI+Cgk8cmVjdCB3aWR0aD0nMTAyJScgaGVpZ2h0PScxMDIlJyBmaWxsPScjOTdkM2MxJy8+Cgk8cmVjdCB4PSctMSUnIHk9Jy0xJScgd2lkdGg9JzEwMiUnIGhlaWdodD0nMTAyJScgZmlsbD0nI2IxZjZlMScgZmlsdGVyPSd1cmwoI24pJyBvcGFjaXR5PScxJy8+Cjwvc3ZnPg==');
+  background-color: #b1f6e1;
+  background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSczMDAnIGhlaWdodD0nMzAwJyB2aWV3Qm94PScwIDAgMTUwIDE1MCc+Cgk8ZmlsdGVyIGlkPSduJyB4PScwJyB5PScwJz4KCQk8ZmVUdXJidWxlbmNlIHR5cGU9J3R1cmJ1bGVuY2UnIGJhc2VGcmVxdWVuY3k9Jy43JyByZXN1bHQ9J2Z1enonIG51bU9jdGF2ZXM9JzInIHN0aXRjaFRpbGVzPSdzdGl0Y2gnLz4KCQk8ZmVDb21wb3NpdGUgaW49J1NvdXJjZUdyYXBoaWMnIGluMj0nZnV6eicgb3BlcmF0b3I9J2FyaXRobWV0aWMnIGsxPScwJyBrMj0nMScgazM9Jy0wLjUzJyBrND0nLjAxJyAvPgoJPC9maWx0ZXI+Cgk8cmVjdCB3aWR0aD0nMTAyJScgaGVpZ2h0PScxMDIlJyBmaWxsPScjOTdkM2MxJy8+Cgk8cmVjdCB4PSctMSUnIHk9Jy0xJScgd2lkdGg9JzEwMiUnIGhlaWdodD0nMTAyJScgZmlsbD0nI2IxZjZlMScgZmlsdGVyPSd1cmwoI24pJyBvcGFjaXR5PScxJy8+Cjwvc3ZnPg==');
   font-size: 15px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.36);
   .logo {
@@ -91,9 +92,6 @@ body {
     background: @background-color;
     line-height: @height;
     white-space: nowrap;
-    &:hover {
-      overflow-x: visible;
-    }
     &.active {
       background: linear-gradient(to top, #2862AF, #0ab0dc);
       color: #ffffff;
@@ -136,6 +134,29 @@ table.list {
       border-right: @cell-border-style;
       padding-left: @cell-hor-padding;
       padding-right: @cell-hor-padding;
+    }
+  }
+}
+
+.edit-form {
+  background-color: #d4d5d5;
+  div {
+    height: 34px;
+    label {
+      width: 150px;
+      margin: 8px;
+      text-align: right;
+      float: left;
+    }
+    div {
+      float: left;
+      margin: 5px;
+      input {
+        width: 400px;
+        font-size: 12px;
+        border-radius: 3px;
+        border-width: 1px;
+      }
     }
   }
 }

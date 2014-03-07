@@ -832,9 +832,6 @@ body {
   line-height: 22px;
   white-space: nowrap;
 }
-.left-panel a:hover {
-  overflow-x: visible;
-}
 .left-panel a.active {
   background: linear-gradient(to top, #2862af, #0ab0dc);
   color: #ffffff;
@@ -869,4 +866,26 @@ table.list tbody td {
   border-right: 1px solid #a1a1a1;
   padding-left: 2px;
   padding-right: 2px;
+}
+.edit-form {
+  background-color: #d4d5d5;
+}
+.edit-form div {
+  height: 34px;
+}
+.edit-form div label {
+  width: 150px;
+  margin: 8px;
+  text-align: right;
+  float: left;
+}
+.edit-form div div {
+  float: left;
+  margin: 5px;
+}
+.edit-form div div input {
+  width: 400px;
+  font-size: 12px;
+  border-radius: 3px;
+  border-width: 1px;
 }
