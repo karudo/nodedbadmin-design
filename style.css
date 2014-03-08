@@ -761,14 +761,9 @@ body {
   font: 12px/18px "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
   height: 100%;
 }
-.wrapper {
-  width: 100%;
-  min-width: 1000px;
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-}
 .top-menu {
+  position: fixed;
+  width: 100%;
   height: 20px;
   background-color: #b1f6e1;
   background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSczMDAnIGhlaWdodD0nMzAwJyB2aWV3Qm94PScwIDAgMTUwIDE1MCc+Cgk8ZmlsdGVyIGlkPSduJyB4PScwJyB5PScwJz4KCQk8ZmVUdXJidWxlbmNlIHR5cGU9J3R1cmJ1bGVuY2UnIGJhc2VGcmVxdWVuY3k9Jy43JyByZXN1bHQ9J2Z1enonIG51bU9jdGF2ZXM9JzInIHN0aXRjaFRpbGVzPSdzdGl0Y2gnLz4KCQk8ZmVDb21wb3NpdGUgaW49J1NvdXJjZUdyYXBoaWMnIGluMj0nZnV6eicgb3BlcmF0b3I9J2FyaXRobWV0aWMnIGsxPScwJyBrMj0nMScgazM9Jy0wLjUzJyBrND0nLjAxJyAvPgoJPC9maWx0ZXI+Cgk8cmVjdCB3aWR0aD0nMTAyJScgaGVpZ2h0PScxMDIlJyBmaWxsPScjOTdkM2MxJy8+Cgk8cmVjdCB4PSctMSUnIHk9Jy0xJScgd2lkdGg9JzEwMiUnIGhlaWdodD0nMTAyJScgZmlsbD0nI2IxZjZlMScgZmlsdGVyPSd1cmwoI24pJyBvcGFjaXR5PScxJy8+Cjwvc3ZnPg==');
@@ -786,29 +781,19 @@ body {
   color: #000000;
   text-decoration: none;
 }
-.middle {
+.wrapper {
   width: 100%;
-  padding: 0 0 100px;
-  position: relative;
-}
-.middle:after {
-  display: table;
-  clear: both;
-  content: '';
-}
-.container {
-  width: 100%;
-  float: left;
-  overflow: hidden;
+  min-width: 1000px;
 }
 .content {
-  padding: 0 0 0 250px;
+  padding: 21px 0 0 250px;
 }
 .left-panel {
-  float: left;
+  position: fixed;
+  top: 21px;
+  left: 0px;
   width: 249px;
-  margin-left: -100%;
-  position: relative;
+  height: calc(100% - 20px);
   background: #c7ced7;
   border-right: 1px solid #9f9f9f;
 }
@@ -847,7 +832,7 @@ body {
   font-size: 11px;
 }
 table.list {
-  /*border-top: 1px solid #7a7a7a;*/
+  border-top: 1px solid #7a7a7a;
   width: 100%;
 }
 table.list th {
@@ -870,20 +855,20 @@ table.list tbody td {
 .edit-form {
   background-color: #d4d5d5;
 }
-.edit-form div {
+.edit-form > div {
   height: 34px;
 }
-.edit-form div label {
+.edit-form > div > label {
   width: 150px;
   margin: 8px;
   text-align: right;
   float: left;
 }
-.edit-form div div {
+.edit-form > div > div {
   float: left;
   margin: 5px;
 }
-.edit-form div div input {
+.edit-form > div > div input {
   width: 400px;
   font-size: 12px;
   border-radius: 3px;
