@@ -1,7 +1,9 @@
 @import "reset.less";
 @import "vars.less";
 @import "glyphicons.less";
-
+@import "balloon.less";
+@import "top-menu.less";
+@import "left-panel.less";
 
 html {
   height: 100%;
@@ -13,84 +15,13 @@ body {
   font: 12px/18px "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
   height: 100%;
 }
-
-
-.top-menu {
-  position: fixed;
-  width: 100%;
-  height: @top-menu-height;
-  background-color: #f4f4f4;
-  background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSczMDAnIGhlaWdodD0nMzAwJyB2aWV3Qm94PScwIDAgMTUwIDE1MCc+Cgk8ZmlsdGVyIGlkPSduJyB4PScwJyB5PScwJz4KCQk8ZmVUdXJidWxlbmNlIHR5cGU9J3R1cmJ1bGVuY2UnIGJhc2VGcmVxdWVuY3k9Jy43JyByZXN1bHQ9J2Z1enonIG51bU9jdGF2ZXM9JzInIHN0aXRjaFRpbGVzPSdzdGl0Y2gnLz4KCQk8ZmVDb21wb3NpdGUgaW49J1NvdXJjZUdyYXBoaWMnIGluMj0nZnV6eicgb3BlcmF0b3I9J2FyaXRobWV0aWMnIGsxPScwJyBrMj0nMScgazM9Jy0wLjUzJyBrND0nLjAxJyAvPgoJPC9maWx0ZXI+Cgk8cmVjdCB3aWR0aD0nMTAyJScgaGVpZ2h0PScxMDIlJyBmaWxsPScjOTdkM2MxJy8+Cgk8cmVjdCB4PSctMSUnIHk9Jy0xJScgd2lkdGg9JzEwMiUnIGhlaWdodD0nMTAyJScgZmlsbD0nI2IxZjZlMScgZmlsdGVyPSd1cmwoI24pJyBvcGFjaXR5PScxJy8+Cjwvc3ZnPg==');
-  font-size: 15px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.36);
-  .logo {
-    font-weight: bold;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  a {
-    display: inline-block;
-    margin-right: 12px;
-    color: #000000;
-    text-decoration: none;
-  }
-}
-
 .wrapper {
   width: 100%;
   min-width: 1000px;
 }
 
-
-
 .content {
   padding: @top-menu-height+1px 0 0 @left-panel-width;
-}
-
-
-.left-panel {
-  @background-color: #c7ced7;
-  @border-width: 1px;
-  position: fixed;
-  top: 1px + @top-menu-height;
-  left: 0px;
-  width: @left-panel-width - @border-width;
-  height: calc(~"100%" - @top-menu-height);
-  background: @background-color;
-  border-right: @border-width solid #9f9f9f;
-  overflow: auto;
-  div {
-    margin: 2px;
-    select {
-      width: 100%;
-    }
-  }
-  a {
-    @height: 22px;
-    @font-size: 11px;
-    color: #000000;
-
-    display: block;
-    font-size: @font-size;
-    height: @height;
-    text-decoration: none;
-    padding-left: 15px;
-    overflow-x: hidden;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    background: @background-color;
-    line-height: @height;
-    white-space: nowrap;
-    &.active {
-      background: linear-gradient(to top, #2862AF, #0ab0dc);
-      color: #ffffff;
-      font-weight: bold;
-    }
-    i {
-      color: #fff361;
-      font-size: @font-size * 1.25;
-    }
-  }
 }
 
 .big-icons-panel {
@@ -146,94 +77,6 @@ table.list {
         border-radius: 3px;
         border-width: 1px;
       }
-    }
-  }
-}
-
-.balloon {
-  @border-color: #139acd;
-  @background-color: #f4f4f4;
-  @border-width: 2px;
-  @arrow-left: 90px;
-  position: absolute;
-  top: 34px;
-  left: 70px;
-  background-color: @background-color;
-  width: 300px;
-  height: 100px;
-  border: @border-width solid @border-color;
-  border-radius: @border-width * 3;
-  &:before, &:after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    bottom: 100%;
-  }
-  &:before {
-    border-color: @border-color transparent;
-    border-width: 0 10px 14px;
-    left: @arrow-left;
-  }
-  &:after {
-    border-color: #d7d7d9 transparent;
-    border-width: 0px 8px 11px;
-    left: @arrow-left + 2px;
-  }
-  .header {
-    padding-top: 1px;
-    padding-left: 4px;
-    height: 20px;
-    background: linear-gradient(to top, #969696, #d7d7d9);
-    font-size: 10px;
-    border-radius: @border-width * 2 @border-width * 2 0 0;
-  }
-  .closer {
-    display: block;
-    position: absolute;
-    top: 4px;
-    left: 300px - 16px;
-
-    @size: 10px;
-    @border-radius: @size * (50/32);
-    @border-width: @size * (4/32);
-    @ba-height: @size * (6/32);
-    @ba-width: @size * (24/32);
-    @ba-border-radius: @size * (10/32);
-    @ba-top: @size * (12.5/32);
-    @ba-left: @size * (4 / 32);
-
-    width: @size;
-    height: @size;
-
-    border-radius: @border-radius;
-
-    border: @border-width solid #333;
-
-    &:before, &:after {
-      content:'';
-      height: @ba-height;
-      width: @ba-width;
-      display:block;
-      background:#333;
-      border-radius: @ba-border-radius;
-      position:absolute;
-      top: @ba-top;
-      left: @ba-left;
-      transform:rotate(-45deg);
-      -moz-transform: rotate(-45deg);
-      -o-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-      -webkit-transform: rotate(-45deg);
-    }
-
-    &:after {
-      transform:rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -webkit-transform: rotate(45deg);
     }
   }
 }

@@ -740,141 +740,6 @@ table {
 .glyphicon-tree-deciduous:before {
   content: "\e200";
 }
-html {
-  height: 100%;
-}
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary {
-  display: block;
-}
-body {
-  font: 12px/18px "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
-  height: 100%;
-}
-.top-menu {
-  position: fixed;
-  width: 100%;
-  height: 20px;
-  background-color: #f4f4f4;
-  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSczMDAnIGhlaWdodD0nMzAwJyB2aWV3Qm94PScwIDAgMTUwIDE1MCc+Cgk8ZmlsdGVyIGlkPSduJyB4PScwJyB5PScwJz4KCQk8ZmVUdXJidWxlbmNlIHR5cGU9J3R1cmJ1bGVuY2UnIGJhc2VGcmVxdWVuY3k9Jy43JyByZXN1bHQ9J2Z1enonIG51bU9jdGF2ZXM9JzInIHN0aXRjaFRpbGVzPSdzdGl0Y2gnLz4KCQk8ZmVDb21wb3NpdGUgaW49J1NvdXJjZUdyYXBoaWMnIGluMj0nZnV6eicgb3BlcmF0b3I9J2FyaXRobWV0aWMnIGsxPScwJyBrMj0nMScgazM9Jy0wLjUzJyBrND0nLjAxJyAvPgoJPC9maWx0ZXI+Cgk8cmVjdCB3aWR0aD0nMTAyJScgaGVpZ2h0PScxMDIlJyBmaWxsPScjOTdkM2MxJy8+Cgk8cmVjdCB4PSctMSUnIHk9Jy0xJScgd2lkdGg9JzEwMiUnIGhlaWdodD0nMTAyJScgZmlsbD0nI2IxZjZlMScgZmlsdGVyPSd1cmwoI24pJyBvcGFjaXR5PScxJy8+Cjwvc3ZnPg==');
-  font-size: 15px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.36);
-}
-.top-menu .logo {
-  font-weight: bold;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-.top-menu a {
-  display: inline-block;
-  margin-right: 12px;
-  color: #000000;
-  text-decoration: none;
-}
-.wrapper {
-  width: 100%;
-  min-width: 1000px;
-}
-.content {
-  padding: 21px 0 0 250px;
-}
-.left-panel {
-  position: fixed;
-  top: 21px;
-  left: 0px;
-  width: 249px;
-  height: calc(100% - 20px);
-  background: #c7ced7;
-  border-right: 1px solid #9f9f9f;
-  overflow: auto;
-}
-.left-panel div {
-  margin: 2px;
-}
-.left-panel div select {
-  width: 100%;
-}
-.left-panel a {
-  color: #000000;
-  display: block;
-  font-size: 11px;
-  height: 22px;
-  text-decoration: none;
-  padding-left: 15px;
-  overflow-x: hidden;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  background: #c7ced7;
-  line-height: 22px;
-  white-space: nowrap;
-}
-.left-panel a.active {
-  background: linear-gradient(to top, #2862af, #0ab0dc);
-  color: #ffffff;
-  font-weight: bold;
-}
-.left-panel a i {
-  color: #fff361;
-  font-size: 13.75px;
-}
-.big-icons-panel {
-  height: 50px;
-  background: linear-gradient(to top, #969696, #d7d7d9);
-  font-size: 11px;
-}
-table.list {
-  border-top: 1px solid #7a7a7a;
-  width: 100%;
-}
-table.list th {
-  text-align: left;
-  text-transform: uppercase;
-  background: linear-gradient(to top, #e7e7e7, #f4f4f4);
-  border-right: 1px solid #a1a1a1;
-  border-bottom: 1px solid #a1a1a1;
-  padding-left: 2px;
-  padding-right: 2px;
-}
-table.list tbody tr:nth-child(odd) > td {
-  background-color: #e6eaef;
-}
-table.list tbody td {
-  border-right: 1px solid #a1a1a1;
-  padding-left: 2px;
-  padding-right: 2px;
-}
-.edit-form {
-  background-color: #d4d5d5;
-}
-.edit-form > div {
-  height: 34px;
-}
-.edit-form > div > label {
-  width: 150px;
-  margin: 8px;
-  text-align: right;
-  float: left;
-}
-.edit-form > div > div {
-  float: left;
-  margin: 5px;
-}
-.edit-form > div > div input {
-  width: 400px;
-  font-size: 12px;
-  border-radius: 3px;
-  border-width: 1px;
-}
 .balloon {
   position: absolute;
   top: 34px;
@@ -931,7 +796,7 @@ table.list tbody td {
   background: #333;
   border-radius: 3.125px;
   position: absolute;
-  top: 3.90625px;
+  top: 4.0625px;
   left: 1.25px;
   transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
@@ -945,4 +810,139 @@ table.list tbody td {
   -o-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
+}
+.top-menu {
+  position: fixed;
+  width: 100%;
+  height: 20px;
+  background-color: #f4f4f4;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSczMDAnIGhlaWdodD0nMzAwJyB2aWV3Qm94PScwIDAgMTUwIDE1MCc+Cgk8ZmlsdGVyIGlkPSduJyB4PScwJyB5PScwJz4KCQk8ZmVUdXJidWxlbmNlIHR5cGU9J3R1cmJ1bGVuY2UnIGJhc2VGcmVxdWVuY3k9Jy43JyByZXN1bHQ9J2Z1enonIG51bU9jdGF2ZXM9JzInIHN0aXRjaFRpbGVzPSdzdGl0Y2gnLz4KCQk8ZmVDb21wb3NpdGUgaW49J1NvdXJjZUdyYXBoaWMnIGluMj0nZnV6eicgb3BlcmF0b3I9J2FyaXRobWV0aWMnIGsxPScwJyBrMj0nMScgazM9Jy0wLjUzJyBrND0nLjAxJyAvPgoJPC9maWx0ZXI+Cgk8cmVjdCB3aWR0aD0nMTAyJScgaGVpZ2h0PScxMDIlJyBmaWxsPScjOTdkM2MxJy8+Cgk8cmVjdCB4PSctMSUnIHk9Jy0xJScgd2lkdGg9JzEwMiUnIGhlaWdodD0nMTAyJScgZmlsbD0nI2IxZjZlMScgZmlsdGVyPSd1cmwoI24pJyBvcGFjaXR5PScxJy8+Cjwvc3ZnPg==');
+  font-size: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.36);
+}
+.top-menu .logo {
+  font-weight: bold;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.top-menu a {
+  display: inline-block;
+  margin-right: 12px;
+  color: #000000;
+  text-decoration: none;
+}
+.left-panel {
+  position: fixed;
+  top: 21px;
+  left: 0px;
+  width: 249px;
+  height: calc(100% - 20px);
+  background: #c7ced7;
+  border-right: 1px solid #9f9f9f;
+  overflow: auto;
+}
+.left-panel div {
+  margin: 2px;
+}
+.left-panel div select {
+  width: 100%;
+}
+.left-panel a {
+  color: #000000;
+  display: block;
+  font-size: 11px;
+  height: 22px;
+  text-decoration: none;
+  padding-left: 15px;
+  overflow-x: hidden;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  background: #c7ced7;
+  line-height: 22px;
+  white-space: nowrap;
+}
+.left-panel a.active {
+  background: linear-gradient(to top, #2862af, #0ab0dc);
+  color: #ffffff;
+  font-weight: bold;
+}
+.left-panel a i {
+  color: #fff361;
+  font-size: 13.75px;
+}
+html {
+  height: 100%;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+body {
+  font: 12px/18px "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+  height: 100%;
+}
+.wrapper {
+  width: 100%;
+  min-width: 1000px;
+}
+.content {
+  padding: 21px 0 0 250px;
+}
+.big-icons-panel {
+  height: 50px;
+  background: linear-gradient(to top, #969696, #d7d7d9);
+  font-size: 11px;
+}
+table.list {
+  border-top: 1px solid #7a7a7a;
+  width: 100%;
+}
+table.list th {
+  text-align: left;
+  text-transform: uppercase;
+  background: linear-gradient(to top, #e7e7e7, #f4f4f4);
+  border-right: 1px solid #a1a1a1;
+  border-bottom: 1px solid #a1a1a1;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+table.list tbody tr:nth-child(odd) > td {
+  background-color: #e6eaef;
+}
+table.list tbody td {
+  border-right: 1px solid #a1a1a1;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.edit-form {
+  background-color: #d4d5d5;
+}
+.edit-form > div {
+  height: 34px;
+}
+.edit-form > div > label {
+  width: 150px;
+  margin: 8px;
+  text-align: right;
+  float: left;
+}
+.edit-form > div > div {
+  float: left;
+  margin: 5px;
+}
+.edit-form > div > div input {
+  width: 400px;
+  font-size: 12px;
+  border-radius: 3px;
+  border-width: 1px;
 }

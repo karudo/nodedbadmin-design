@@ -1,0 +1,88 @@
+.balloon {
+  @border-color: #139acd;
+  @background-color: #f4f4f4;
+  @border-width: 2px;
+  @arrow-left: 90px;
+  position: absolute;
+  top: 34px;
+  left: 70px;
+  background-color: @background-color;
+  width: 300px;
+  height: 100px;
+  border: @border-width solid @border-color;
+  border-radius: @border-width * 3;
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    bottom: 100%;
+  }
+  &:before {
+    border-color: @border-color transparent;
+    border-width: 0 10px 14px;
+    left: @arrow-left;
+  }
+  &:after {
+    border-color: #d7d7d9 transparent;
+    border-width: 0px 8px 11px;
+    left: @arrow-left + 2px;
+  }
+  .header {
+    padding-top: 1px;
+    padding-left: 4px;
+    height: 20px;
+    background: linear-gradient(to top, #969696, #d7d7d9);
+    font-size: 10px;
+    border-radius: @border-width * 2 @border-width * 2 0 0;
+  }
+  .closer {
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 300px - 16px;
+
+    @size: 10px;
+    @border-radius: @size * (50/32);
+    @border-width: @size * (4/32);
+    @ba-height: @size * (6/32);
+    @ba-width: @size * (24/32);
+    @ba-border-radius: @size * (10/32);
+    @ba-top: @size * (13/32);
+    @ba-left: @size * (4/32);
+
+    width: @size;
+    height: @size;
+
+    border-radius: @border-radius;
+
+    border: @border-width solid #333;
+
+    &:before, &:after {
+      content:'';
+      height: @ba-height;
+      width: @ba-width;
+      display:block;
+      background:#333;
+      border-radius: @ba-border-radius;
+      position:absolute;
+      top: @ba-top;
+      left: @ba-left;
+      transform:rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+    }
+
+    &:after {
+      transform:rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+    }
+  }
+}
+
