@@ -1,14 +1,21 @@
 .balloon {
-  @border-color: #139acd;
+  @width: 400px;
+  @height: 100px;
   @background-color: #f4f4f4;
+  @header-background-color: #d7d7d9;
   @border-width: 2px;
-  @arrow-left: 90px;
-  position: absolute;
+  @border-color: #4aacd0;
+  @arrow-left: 10px;
+  @arrow-right: @width - 40px;
+
+  width: @width;
+  min-height: @height;
+
+  position: fixed;
   top: 34px;
-  left: 70px;
+  left: 270px;
+
   background-color: @background-color;
-  width: 300px;
-  height: 100px;
   border: @border-width solid @border-color;
   border-radius: @border-width * 3;
   &:before, &:after {
@@ -25,64 +32,64 @@
     left: @arrow-left;
   }
   &:after {
-    border-color: #d7d7d9 transparent;
+    border-color: @header-background-color transparent;
     border-width: 0px 8px 11px;
     left: @arrow-left + 2px;
   }
+  &.right {
+    left: initial;
+    right: 20px;
+  }
+  &.arrow-right {
+    &:before {
+      left: @arrow-right;
+    }
+    &:after {
+      left: @arrow-right + 2;
+    }
+  }
   .header {
     padding-top: 1px;
-    padding-left: 4px;
+    padding-left: 6px;
     height: 20px;
-    background: linear-gradient(to top, #969696, #d7d7d9);
-    font-size: 10px;
+    background: linear-gradient(to top, #969696, @header-background-color);
+    font-size: 11px;
+    font-weight: bold;
     border-radius: @border-width * 2 @border-width * 2 0 0;
+  }
+  .content {
+    padding: 4px;
+    border-radius: 0 0 @border-width * 2 @border-width * 2;
+    color: #275a7b;
+    background-color: #c8dfec;
   }
   .closer {
     display: block;
     position: absolute;
-    top: 4px;
-    left: 300px - 16px;
-
-    @size: 10px;
-    @border-radius: @size * (50/32);
-    @border-width: @size * (4/32);
-    @ba-height: @size * (6/32);
-    @ba-width: @size * (24/32);
-    @ba-border-radius: @size * (10/32);
-    @ba-top: @size * (13/32);
-    @ba-left: @size * (4/32);
-
-    width: @size;
-    height: @size;
-
-    border-radius: @border-radius;
-
-    border: @border-width solid #333;
-
-    &:before, &:after {
-      content:'';
-      height: @ba-height;
-      width: @ba-width;
-      display:block;
-      background:#333;
-      border-radius: @ba-border-radius;
-      position:absolute;
-      top: @ba-top;
-      left: @ba-left;
-      transform:rotate(-45deg);
-      -moz-transform: rotate(-45deg);
-      -o-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-      -webkit-transform: rotate(-45deg);
+    top: 2px;
+    right: 6px;
+    font-size: 14px;
+    a {
+      text-decoration: none;
+      color: #000000;
+      &:hover {
+        color: @border-color;
+      }
     }
+  }
 
-    &:after {
-      transform:rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -webkit-transform: rotate(45deg);
+  &.error {
+    @border-color: #c63b3c;
+    border-color: @border-color;
+    &:before {
+      border-color: @border-color transparent;
+    }
+    .content {
+      color: #923132;
+      background-color: #e5cdce;
+    }
+    a:hover {
+      color: @border-color;
     }
   }
 }
-

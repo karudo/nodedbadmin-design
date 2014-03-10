@@ -1,11 +1,11 @@
 .balloon {
-  position: absolute;
+  width: 400px;
+  min-height: 100px;
+  position: fixed;
   top: 34px;
-  left: 70px;
+  left: 270px;
   background-color: #f4f4f4;
-  width: 300px;
-  height: 100px;
-  border: 2px solid #139acd;
+  border: 2px solid #4aacd0;
   border-radius: 6px;
 }
 .balloon:before,
@@ -18,54 +18,64 @@
   bottom: 100%;
 }
 .balloon:before {
-  border-color: #139acd transparent;
+  border-color: #4aacd0 transparent;
   border-width: 0 10px 14px;
-  left: 90px;
+  left: 10px;
 }
 .balloon:after {
   border-color: #d7d7d9 transparent;
   border-width: 0px 8px 11px;
-  left: 92px;
+  left: 12px;
+}
+.balloon.right {
+  left: initial;
+  right: 20px;
+}
+.balloon.arrow-right:before {
+  left: 360px;
+}
+.balloon.arrow-right:after {
+  left: 362px;
 }
 .balloon .header {
   padding-top: 1px;
-  padding-left: 4px;
+  padding-left: 6px;
   height: 20px;
   background: linear-gradient(to top, #969696, #d7d7d9);
-  font-size: 10px;
+  font-size: 11px;
+  font-weight: bold;
   border-radius: 4px 4px 0 0;
+}
+.balloon .content {
+  padding: 4px;
+  border-radius: 0 0 4px 4px;
+  color: #275a7b;
+  background-color: #c8dfec;
 }
 .balloon .closer {
   display: block;
   position: absolute;
-  top: 4px;
-  left: 284px;
-  width: 10px;
-  height: 10px;
-  border-radius: 15.625px;
-  border: 1.25px solid #333333;
+  top: 2px;
+  right: 6px;
+  font-size: 14px;
 }
-.balloon .closer:before,
-.balloon .closer:after {
-  content: '';
-  height: 1.875px;
-  width: 7.5px;
-  display: block;
-  background: #333;
-  border-radius: 3.125px;
-  position: absolute;
-  top: 4.0625px;
-  left: 1.25px;
-  transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
+.balloon .closer a {
+  text-decoration: none;
+  color: #000000;
 }
-.balloon .closer:after {
-  transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
+.balloon .closer a:hover {
+  color: #4aacd0;
+}
+.balloon.error {
+  border-color: #c63b3c;
+}
+.balloon.error:before {
+  border-color: #c63b3c transparent;
+}
+.balloon.error .content {
+  color: #923132;
+  background-color: #e5cdce;
+}
+.balloon.error a:hover {
+  color: #c63b3c;
 }

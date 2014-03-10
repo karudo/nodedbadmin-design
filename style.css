@@ -741,13 +741,13 @@ table {
   content: "\e200";
 }
 .balloon {
-  position: absolute;
+  width: 400px;
+  min-height: 100px;
+  position: fixed;
   top: 34px;
-  left: 70px;
+  left: 270px;
   background-color: #f4f4f4;
-  width: 300px;
-  height: 100px;
-  border: 2px solid #139acd;
+  border: 2px solid #4aacd0;
   border-radius: 6px;
 }
 .balloon:before,
@@ -760,56 +760,66 @@ table {
   bottom: 100%;
 }
 .balloon:before {
-  border-color: #139acd transparent;
+  border-color: #4aacd0 transparent;
   border-width: 0 10px 14px;
-  left: 90px;
+  left: 10px;
 }
 .balloon:after {
   border-color: #d7d7d9 transparent;
   border-width: 0px 8px 11px;
-  left: 92px;
+  left: 12px;
+}
+.balloon.right {
+  left: initial;
+  right: 20px;
+}
+.balloon.arrow-right:before {
+  left: 360px;
+}
+.balloon.arrow-right:after {
+  left: 362px;
 }
 .balloon .header {
   padding-top: 1px;
-  padding-left: 4px;
+  padding-left: 6px;
   height: 20px;
   background: linear-gradient(to top, #969696, #d7d7d9);
-  font-size: 10px;
+  font-size: 11px;
+  font-weight: bold;
   border-radius: 4px 4px 0 0;
+}
+.balloon .content {
+  padding: 4px;
+  border-radius: 0 0 4px 4px;
+  color: #275a7b;
+  background-color: #c8dfec;
 }
 .balloon .closer {
   display: block;
   position: absolute;
-  top: 4px;
-  left: 284px;
-  width: 10px;
-  height: 10px;
-  border-radius: 15.625px;
-  border: 1.25px solid #333333;
+  top: 2px;
+  right: 6px;
+  font-size: 14px;
 }
-.balloon .closer:before,
-.balloon .closer:after {
-  content: '';
-  height: 1.875px;
-  width: 7.5px;
-  display: block;
-  background: #333;
-  border-radius: 3.125px;
-  position: absolute;
-  top: 4.0625px;
-  left: 1.25px;
-  transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
+.balloon .closer a {
+  text-decoration: none;
+  color: #000000;
 }
-.balloon .closer:after {
-  transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
+.balloon .closer a:hover {
+  color: #4aacd0;
+}
+.balloon.error {
+  border-color: #c63b3c;
+}
+.balloon.error:before {
+  border-color: #c63b3c transparent;
+}
+.balloon.error .content {
+  color: #923132;
+  background-color: #e5cdce;
+}
+.balloon.error a:hover {
+  color: #c63b3c;
 }
 .top-menu {
   position: fixed;
@@ -890,6 +900,7 @@ summary {
 body {
   font: 12px/18px "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
   height: 100%;
+  background-color: #dfdfdf;
 }
 .wrapper {
   width: 100%;
@@ -920,29 +931,48 @@ table.list tbody tr:nth-child(odd) > td {
   background-color: #e6eaef;
 }
 table.list tbody td {
+  background-color: #ffffff;
   border-right: 1px solid #a1a1a1;
   padding-left: 2px;
   padding-right: 2px;
 }
 .edit-form {
+  width: calc(100% - 80px);
+  margin-top: 20px;
+  margin-left: 40px;
+}
+.edit-form .fields {
   background-color: #d4d5d5;
+  border: 1px solid #aeaeae;
+  border-radius: 4px;
 }
-.edit-form > div {
+.edit-form .fields > div {
   height: 34px;
+  width: 100%;
 }
-.edit-form > div > label {
-  width: 150px;
+.edit-form .fields > div > label {
+  min-width: 150px;
+  width: 10%;
   margin: 8px;
   text-align: right;
   float: left;
 }
-.edit-form > div > div {
+.edit-form .fields > div > div {
   float: left;
   margin: 5px;
+  max-width: calc(100% - 176px);
+  width: calc(90% - 26px);
 }
-.edit-form > div > div input {
-  width: 400px;
+.edit-form .fields > div > div input {
+  width: 99%;
   font-size: 12px;
   border-radius: 3px;
   border-width: 1px;
+}
+.edit-form .buttons {
+  margin-top: 4px;
+}
+.edit-form .buttons button {
+  width: 100px;
+  font-size: 13px;
 }
