@@ -4,7 +4,7 @@
   position: fixed;
   top: 34px;
   left: 270px;
-  background-color: #f4f4f4;
+  background-color: #c8dfec;
   border: 2px solid #4aacd0;
   border-radius: 6px;
 }
@@ -23,7 +23,7 @@
   left: 10px;
 }
 .balloon:after {
-  border-color: #d7d7d9 transparent;
+  border-color: #c8dfec transparent;
   border-width: 0px 8px 11px;
   left: 12px;
 }
@@ -38,11 +38,9 @@
   left: 362px;
 }
 .balloon .header {
-  padding-top: 1px;
+  padding-top: 4px;
   padding-left: 6px;
-  height: 20px;
-  background: linear-gradient(to top, #969696, #d7d7d9);
-  font-size: 11px;
+  font-size: 15px;
   font-weight: bold;
   border-radius: 4px 4px 0 0;
 }
@@ -50,7 +48,6 @@
   padding: 4px;
   border-radius: 0 0 4px 4px;
   color: #275a7b;
-  background-color: #c8dfec;
 }
 .balloon .closer {
   display: block;
@@ -68,13 +65,16 @@
 }
 .balloon.error {
   border-color: #c63b3c;
+  background-color: #e5cdce;
 }
 .balloon.error:before {
   border-color: #c63b3c transparent;
 }
+.balloon.error:after {
+  border-color: #e5cdce transparent;
+}
 .balloon.error .content {
   color: #923132;
-  background-color: #e5cdce;
 }
 .balloon.error a:hover {
   color: #c63b3c;
